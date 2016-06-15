@@ -1,0 +1,184 @@
+
+@mixin linkUnderline($color){
+a {
+  text-decoration: none;
+  position: relative;
+  color: $color;
+  padding:3px 8px 4px 8px;
+	  &:after{
+	  	content: '';
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 0%;
+	    border-bottom: 1px solid $color;
+	    transition: 0.4s;
+	  }
+	  &:hover:after{
+  		width: 100%;
+	  }
+	}
+}
+
+@mixin mobileMenuRadius($radius){
+	a{
+		color:#666666;
+		&:hover{
+			border-radius:$radius;
+		}
+	}
+	a.slicknav_item:hover{
+			border-radius:$radius;
+	}
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+	background: no-repeat center right fixed url("/images/spa-treatments-to-try.png");
+  -webkit-backgroun-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale');
+  
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+a {
+  color: #000000;
+}
+
+header, section, footer{
+	float: none !important;
+	margin: 1% 0;
+}
+
+.nav:not(.dropdown-menu) >.active >a:after{
+    	content: '';
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 100% !important;
+	    border-bottom: 1px solid #333333;
+}
+.nav-brand{
+	width: 30%;
+	margin:10px auto;
+	padding: 10px;
+	text-align: center;
+	float: none;
+	img{
+		width: 100%;
+	}
+}
+.slicknav_menu{
+	display: none;
+}
+.nav{
+	float:none;
+	width: 50%;
+	margin:12px auto;
+	display: flex;
+  	justify-content: space-between;
+
+		li:not(.dropdown-menu){
+			margin:0 auto;
+			padding:3px 12px 5px 12px;
+			@include linkUnderline(#333333);
+				a{
+					&:hover, &:focus{
+						background-color:rgba(0,0,0,0);
+					}
+					span{
+						display: inline-block;
+						font-size: 0.5em;
+					}
+				}
+				&:hover{
+					.dropdown-menu{
+						background-color:rgba(0,0,0,0);
+						display:block;
+						border:none;
+						box-shadow: none;
+					}
+				}
+		}
+}
+
+.contact, .copy{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: 1em;
+	p{
+		margin:0;
+	}
+	a{
+		display: inline-block;
+	}
+}
+
+slick {
+	width: 75%;
+	margin: 0 auto;
+	div{
+		text-align: center;
+		cursor:pointer;
+		
+	}
+}
+
+
+@media screen and (max-width: 1118px){
+
+.nav{
+	width: 60%;
+}
+
+}
+
+@media screen and(max-width: 797px){
+.nav{
+	width: 72%;
+}
+}
+
+@media screen and (max-width: 650px){
+header,section,footer{
+	width: 100%;
+	margin: 0;
+	padding: 0 !important;
+}
+.nav{
+	display: none;
+	span{
+		display: none;
+	}
+}
+
+
+.slicknav_menu{
+	display: block;
+	background-color: white;
+	li{
+		@include mobileMenuRadius(0px);
+	}
+}
+
+.wrapper {
+	width: 100%;
+	padding: 0;
+}
+.nav-brand{
+	width: 60%;
+}
+
+}

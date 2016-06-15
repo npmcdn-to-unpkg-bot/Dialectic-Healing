@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    include partials/_styles
+  body
+    
+    .wrapper.container-fluid
+      include partials/_header
+      section.container-fluid.col-md-10.center-block.animsition
+        block content
+      include partials/_footer
+  include partials/_scripts
+   
+
