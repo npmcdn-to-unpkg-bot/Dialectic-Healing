@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('contact', { 
   			 title: 'DH | Contact',
+  			 header: 'Contact Us',
   			 moto: 'This is contact Page' 
   						});
 });

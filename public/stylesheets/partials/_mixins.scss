@@ -1,0 +1,71 @@
+@mixin linkUnderline($color){
+a {
+  text-decoration: none;
+  position: relative;
+  color: $color;
+  padding:3px 8px 4px 8px;
+	  &:after{
+	  	content: '';
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 0%;
+	    border-bottom: 1px solid $color;
+	    transition: 0.4s;
+	  }
+	  &:hover:after{
+  		width: 100%;
+	  }
+	}
+}
+
+@mixin mobileMenuRadius($radius){
+	a{
+		color:#666666;
+		&:hover{
+			border-radius:$radius;
+		}
+	}
+	a.slicknav_item:hover{
+		border-radius:$radius;
+	}
+}
+
+@mixin contentWrapper(){
+	width: 100%;
+	margin: 1% auto;
+}
+
+@mixin backdrop(){
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 10px;
+}
+
+@mixin cover(){
+	-webkit-backgroun-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixing gradientLinear($start,$stop){
+ /* Standard syntax */
+}
+
+@mixin linear-gradient($direction, $gradients...) {
+  	background-color: nth($gradients, 1);
+	background: $gradients; /* For browsers that do not support gradients */
+	background: -o-linear-gradient($direction, $gradients...); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($direction, $gradients...); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to $direction, $gradients...);
+}
+
+@mixin bottomRound($radius){
+	border-bottom-right-radius:$radius;
+	border-bottom-left-radius:$radius;
+}

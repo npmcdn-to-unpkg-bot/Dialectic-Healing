@@ -1,6 +1,16 @@
+$(window).resize(function(){
+    displaySpan(); 
+    setButtonHeight();
+    setWindowHeight('#overlay');
+});
+
 $(document).ready(function(){
     setActivePage();
     displaySpan();
+    faqPage();
+    setButtonHeight();
+    appendSymbols();
+
 
     $('.nav').slicknav({
         label: '',
@@ -30,10 +40,6 @@ $(document).ready(function(){
         transition: function(url){ window.location.href = url; }
         });    
 });
-
-$(window).resize(function(){
-    displaySpan(); 
-})
 
 function setActivePage(){
     var currentUrl = location.href;
@@ -66,4 +72,69 @@ function displaySpan(){
         });
 
     }
+}
+
+// function dropDownToggle(){
+//     $('.nav li').hover(function(event){
+//         event.stopzDefaul();ss
+//         if($(this).find('ul')){
+//             $('.dropdown-menu')stop().slideToggle(500);
+//         }
+//     });
+// }
+
+function setButtonHeight(){
+     $buttonWidth = $('#massage').outerWidth();
+     $('.faq-nav').each(function(){
+        $(this).outerHeight($buttonWidth);
+    });
+}
+
+function setWindowHeight($selector) {
+    windowHeight = $(document).innerHeight();
+    $($selector).css('min-height', windowHeight);
+};
+
+function setWindowWidth($selector){
+    windowWidth = $(document).innerWidth();
+    $($selector).css('min-width', windowWidth);
+}
+
+function faqPage(){
+    $('.section').hide();
+    
+    var $overlay = $('<div id="overlay"></div>');
+    var $image = $('<img id="img">');
+    var $sectionWrapper = $('<div class="section-wrapper"></div>');
+    var $close = $('<i class="fa fa-times" aria-hidden="true"></i>');
+
+    $('body').append($overlay);
+
+    $('.button-block button').each(function(){
+        $(this).on('click',function(event){
+            event.preventDefault();
+            $section = $(this).siblings('.section').clone().addClass('clone').append($close);
+
+            $overlay.append($sectionWrapper);
+            $sectionWrapper.append($section.show());
+            $overlay.fadeIn("fast");
+            setWindowHeight('#overlay');
+            
+        });
+    });
+
+    $(document).on('click','.clone .fa-times', function(){
+        $('.section-wrapper').empty();
+        $overlay.fadeOut('fast');
+        $('#overlay').css('min-height',0);
+    });
+
+}
+
+function appendSymbols(){
+    var $question = $('<i class="fa fa-question-circle-o" aria-hidden="true"></i>');  
+    var $strong = $('.section strong');
+                
+    $strong.append(" ");
+    $strong.append($question);
 }

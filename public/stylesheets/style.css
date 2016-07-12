@@ -1,6 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:600);
+@mixing gradientLinear($start,$stop) {
+  /* Standard syntax */ }
+/*Override*/
+.navbar-nav > li > .dropdown-menu {
+  border-image: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.section .fa-times {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  font-size: 2em;
+  color: tomato; }
+  .section .fa-times:hover {
+    cursor: pointer; }
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: no-repeat center right fixed url("/images/spa-treatments-to-try.png");
+  background: no-repeat center right fixed;
+  background-color: #c4d9bf;
+  background: #c4d9bf, #FFFCD6;
+  /* For browsers that do not support gradients */
+  background: -o-linear-gradient(right, #c4d9bf, #FFFCD6);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #c4d9bf, #FFFCD6);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #c4d9bf, #FFFCD6);
   -webkit-backgroun-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
@@ -41,21 +72,24 @@ header, section, footer {
 .slicknav_menu {
   display: none; }
 
+#navigation {
+  background-color: #FFFFFF; }
+
 .nav {
   float: none;
   width: 50%;
-  margin: 12px auto;
-  display: flex;
-  justify-content: space-between; }
-  .nav li:not(.dropdown-menu) {
+  margin: 5px auto;
+  display: flex; }
+  .nav li {
     margin: 0 auto;
-    padding: 3px 12px 5px 12px; }
-    .nav li:not(.dropdown-menu) a {
+    padding: 3px 12px 5px 12px;
+    background-color: #FFFFFF; }
+    .nav li a {
       text-decoration: none;
       position: relative;
       color: #333333;
       padding: 3px 8px 4px 8px; }
-      .nav li:not(.dropdown-menu) a:after {
+      .nav li a:after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -63,23 +97,26 @@ header, section, footer {
         width: 0%;
         border-bottom: 1px solid #333333;
         transition: 0.4s; }
-      .nav li:not(.dropdown-menu) a:hover:after {
+      .nav li a:hover:after {
         width: 100%; }
-    .nav li:not(.dropdown-menu) a:hover, .nav li:not(.dropdown-menu) a:focus {
-      background-color: transparent; }
-    .nav li:not(.dropdown-menu) a span {
-      display: inline-block;
-      font-size: 0.5em; }
-    .nav li:not(.dropdown-menu):hover .dropdown-menu {
+    .nav li a {
+      font-family: "Helvetica", "Arial", sans-serif; }
+      .nav li a:hover, .nav li a:focus {
+        background-color: transparent; }
+      .nav li a span {
+        display: inline-block;
+        font-size: 0.5em; }
+    .nav li:hover .dropdown-menu {
       background-color: transparent;
       display: block;
-      border: none;
       box-shadow: none; }
 
 .contact, .copy {
   width: 100%;
   display: inline-block;
   text-align: center;
+  font-family: "Josefin Slab", serif;
+  letter-spacing: 1px;
   font-size: 1em; }
   .contact p, .copy p {
     margin: 0; }
@@ -93,12 +130,265 @@ slick {
     text-align: center;
     cursor: pointer; }
 
+/*About Page*/
+.about-wrapper {
+  width: 100%;
+  margin: 1% auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px; }
+  .about-wrapper .about-practitioner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3% 0 3% 0; }
+    .about-wrapper .about-practitioner p {
+      text-indent: 40px;
+      text-align: justify;
+      color: #000000; }
+  .about-wrapper .portrait-container {
+    width: 25%;
+    margin: 0 2% 2% 4%;
+    padding: 3% 0 3% 0;
+    height: auto;
+    float: left; }
+    .about-wrapper .portrait-container img {
+      border-radius: 50%;
+      width: 100%;
+      margin: 0 auto;
+      display: inline-block; }
+
+/*FAQ page*/
+.faq-wrapper {
+  width: 100%;
+  margin: 1% auto;
+  text-align: center; }
+  .faq-wrapper .initial-sections {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 3% auto;
+    float: left; }
+    .faq-wrapper .initial-sections .button-block {
+      width: 25%;
+      height: auto;
+      margin: 0 4.166% 2% 4.166%;
+      display: inline-block;
+      float: left;
+      position: relative; }
+      .faq-wrapper .initial-sections .button-block button {
+        position: relative;
+        width: 90%;
+        margin: 1% auto;
+        display: block;
+        border-radius: 50%;
+        border: 8px solid #FFFFFF;
+        background-color: #EEEEEE;
+        margin-bottom: 1%; }
+        .faq-wrapper .initial-sections .button-block button h2 {
+          width: 200px;
+          position: absolute;
+          font-family: "Josefin Slab", serif;
+          font-size: 1.4em;
+          letter-spacing: 1px;
+          color: #66554E;
+          left: 15px;
+          bottom: -50px; }
+        .faq-wrapper .initial-sections .button-block button:focus {
+          outline: none; }
+        .faq-wrapper .initial-sections .button-block button:hover {
+          background-color: #cbc073; }
+  .faq-wrapper #massage {
+    background-image: url("/images/massage-s.jpg");
+    background-repeat: no-repeat;
+    -webkit-backgroun-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  .faq-wrapper #acupuncture {
+    background-image: url("/images/acupuncture-s.jpg");
+    background-repeat: no-repeat;
+    -webkit-backgroun-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  .faq-wrapper #general {
+    background-image: url("/images/waiting.jpg");
+    background-repeat: no-repeat;
+    -webkit-backgroun-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+#overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: left;
+  color: #66554E;
+  overflow: visible;
+  z-index: 997; }
+  #overlay .section-wrapper {
+    width: 80%;
+    position: relative;
+    display: block;
+    margin: 2% auto;
+    background-color: #FFFCD6;
+    border-radius: 15px;
+    z-index: 998; }
+    #overlay .section-wrapper .section {
+      width: 90%;
+      position: relative;
+      margin: 0 auto;
+      padding: 3% 0;
+      z-index: 999; }
+      #overlay .section-wrapper .section strong {
+        margin: 2% 0; }
+      #overlay .section-wrapper .section p {
+        margin: 1% auto; }
+
+.contact-wrapper {
+  width: 100%;
+  margin: 0 auto; }
+  .contact-wrapper .email-holder, .contact-wrapper .contact-holder, .contact-wrapper .map-holder {
+    position: relative;
+    width: 32%;
+    min-height: 350px;
+    display: block;
+    float: left;
+    margin: 1% 0.66667%; }
+  .contact-wrapper .email-holder form {
+    width: 100%; }
+  .contact-wrapper .email-holder .box-style {
+    width: 100%;
+    display: block;
+    padding: 18px 15px;
+    margin-top: 0.5%;
+    border: 1px solid #FFFCD6;
+    font-family: "Josefin Slab", serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: background-color 0.5s ease;
+    background-color: #FFFFFF; }
+    .contact-wrapper .email-holder .box-style:focus {
+      outline: #97BD8F;
+      background-color: #ebf1f6; }
+  .contact-wrapper .email-holder input[type="submit"] {
+    width: 100%;
+    display: block;
+    padding: 10px 10px;
+    margin-top: 1%;
+    background-color: #97BD8F; }
+  .contact-wrapper .email-holder .name, .contact-wrapper .email-holder .phone {
+    width: 49.75%;
+    display: inline-block; }
+  .contact-wrapper .email-holder .name {
+    border-top-left-radius: 15px; }
+  .contact-wrapper .email-holder .phone {
+    border-top-right-radius: 15px;
+    margin-left: 0.5%; }
+  .contact-wrapper .email-holder .message {
+    min-width: 100%;
+    max-width: 100%;
+    height: 182px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; }
+  .contact-wrapper .btn {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle; }
+    @media (min-width: 400px) {
+      .contact-wrapper .btn {
+        display: inline-block;
+        margin-right: 2.5em; }
+        .contact-wrapper .btn:nth-of-type(even) {
+          margin-right: 0; } }
+    @media (min-width: 600px) {
+      .contact-wrapper .btn:nth-of-type(even) {
+        margin-right: 2.5em; }
+      .contact-wrapper .btn:nth-of-type(5) {
+        margin-right: 0; } }
+    .contact-wrapper .btn:hover {
+      text-decoration: none; }
+  .contact-wrapper .btn-5 {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1); }
+  .contact-wrapper .btn-5:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; }
+  .contact-wrapper .contact-holder {
+    border: 1px solid #FFFCD6;
+    background-color: #FFFFFF;
+    border-radius: 15px; }
+    .contact-wrapper .contact-holder .info {
+      width: 100%;
+      float: left; }
+      .contact-wrapper .contact-holder .info #address {
+        margin-top: 50px; }
+      .contact-wrapper .contact-holder .info span {
+        width: 100%;
+        margin: 3% auto;
+        display: inline-block;
+        text-align: left;
+        font-family: "Josefin Slab", serif; }
+        .contact-wrapper .contact-holder .info span h4 {
+          width: 80%;
+          margin: 0 auto;
+          font-size: 1.6em;
+          letter-spacing: 1px; }
+        .contact-wrapper .contact-holder .info span p {
+          width: 80%;
+          margin: 0 auto;
+          font-size: 1.2em; }
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border: 2px solid #FFFCD6;
+  border-radius: 15px; }
+
 @media screen and (max-width: 1118px) {
   .nav {
     width: 60%; } }
 @media screen and (max-width: 797px) {
   .nav {
-    width: 72%; } }
+    width: 72%; }
+
+  .contact-wrapper .email-holder, .contact-wrapper .contact-holder, .contact-wrapper .map-holder {
+    width: 48%;
+    min-height: 350px;
+    margin: 1% 1%; } }
 @media screen and (max-width: 650px) {
   header, section, footer {
     width: 100%;
@@ -125,6 +415,21 @@ slick {
     padding: 0; }
 
   .nav-brand {
-    width: 60%; } }
+    width: 60%; }
+
+  .contact-wrapper .email-holder, .contact-wrapper .contact-holder, .contact-wrapper .map-holder {
+    width: 100%;
+    margin: 1% auto;
+    min-height: 300px;
+    border-radius: 0px; }
+  .contact-wrapper .email-holder .name {
+    border-top-left-radius: 0px; }
+  .contact-wrapper .email-holder .phone {
+    border-top-right-radius: 0px; }
+  .contact-wrapper .email-holder .message {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .contact-wrapper .map-holder #map {
+    border-radius: 0px; } }
 
 /*# sourceMappingURL=style.css.map */

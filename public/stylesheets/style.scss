@@ -1,49 +1,35 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:600);
 
-@mixin linkUnderline($color){
-a {
-  text-decoration: none;
-  position: relative;
-  color: $color;
-  padding:3px 8px 4px 8px;
-	  &:after{
-	  	content: '';
-	    position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    width: 0%;
-	    border-bottom: 1px solid $color;
-	    transition: 0.4s;
-	  }
-	  &:hover:after{
-  		width: 100%;
-	  }
+/*Override*/
+.navbar-nav>li>.dropdown-menu {
+	border-image: none;
+	border: none;
+	box-shadow: none;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    @include bottomRound(10px);
+ }
+
+.section .fa-times{
+	position: absolute;
+	top:10px;
+	right:-30px;
+	font-size: 2em;
+	color: tomato;
+	&:hover{
+		cursor:pointer;
 	}
 }
 
-@mixin mobileMenuRadius($radius){
-	a{
-		color:#666666;
-		&:hover{
-			border-radius:$radius;
-		}
-	}
-	a.slicknav_item:hover{
-			border-radius:$radius;
-	}
-}
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 
-	background: no-repeat center right fixed url("/images/spa-treatments-to-try.png");
-  -webkit-backgroun-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: no-repeat center right fixed;
+	@include linear-gradient(right, lighten($primary-green,15%), $secondary-beige);
+	@include cover();
   
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale');
@@ -82,41 +68,49 @@ header, section, footer{
 .slicknav_menu{
 	display: none;
 }
+
+#navigation{
+	background-color: $white;
+
+}
+
 .nav{
 	float:none;
 	width: 50%;
-	margin:12px auto;
+	margin:5px auto;
 	display: flex;
-  	justify-content: space-between;
 
-		li:not(.dropdown-menu){
-			margin:0 auto;
-			padding:3px 12px 5px 12px;
-			@include linkUnderline(#333333);
-				a{
-					&:hover, &:focus{
-						background-color:rgba(0,0,0,0);
-					}
-					span{
-						display: inline-block;
-						font-size: 0.5em;
-					}
-				}
-				&:hover{
-					.dropdown-menu{
-						background-color:rgba(0,0,0,0);
-						display:block;
-						border:none;
-						box-shadow: none;
-					}
-				}
+	li{
+		margin:0 auto;
+		padding:3px 12px 5px 12px;
+		@include linkUnderline(#333333);
+		background-color: $white;
+		a{
+			font-family: $secondary-font;
+			&:hover, &:focus{
+				background-color:rgba(0,0,0,0);
+			}
+			span{
+				display: inline-block;
+				font-size: 0.5em;
+			}
 		}
+		&:hover{
+			.dropdown-menu{
+				background-color:rgba(0,0,0,0);
+				display:block;
+				box-shadow: none;
+			}
+		}
+	}
 }
 
 .contact, .copy{
 	width: 100%;
 	display: inline-block;
 	text-align: center;
+	font-family: $primary-font;
+	letter-spacing: 1px;
 	font-size: 1em;
 	p{
 		margin:0;
@@ -132,22 +126,317 @@ slick {
 	div{
 		text-align: center;
 		cursor:pointer;
-		
 	}
 }
 
+/*About Page*/
+.about-wrapper{
+	@include contentWrapper();
+	@include backdrop();
+	.about-practitioner{
+	  width: 90%;
+	  margin:0 auto;
+	  padding: 3% 0 3% 0;
+	  p{
+	  	text-indent: 40px;
+	  	text-align: justify;
+	  	color:#000000;
+	  }
+	}
+
+	.portrait-container{
+	  width: 25%;
+	  margin: 0 2% 2% 4%;
+	  padding: 3% 0 3% 0;
+	  height: auto;
+	  float: left;
+	  img{
+	  	border-radius: 50%;
+	    width: 100%;
+	    margin: 0 auto;
+	    display: inline-block;
+	  }
+	  
+	}
+}
+
+@mixin threes(){
+	width: 90%;
+	margin: 1% auto;
+	display: block;
+}
+
+/*FAQ page*/
+.faq-wrapper{
+	width: 100%;
+	margin: 1% auto;
+	text-align: center;
+	
+	.initial-sections{
+		width: 100%;
+		height: auto;
+		margin: 0 auto 3% auto;
+		float: left;
+
+		.button-block{
+			width: 25%;
+			height: auto;
+			margin: 0 4.166% 2% 4.166%;
+			display: inline-block;
+			float: left;
+			position: relative;
+			button{
+				position: relative;
+				@include threes();
+				border-radius: 50%;
+				border: 8px solid $white;
+				background-color: #EEEEEE;
+				margin-bottom: 1%;
+				h2{
+				width: 200px;
+				position: absolute;
+				font-family: $primary-font;
+				font-size: 1.4em;
+				letter-spacing: 1px;
+				color: $primary-brown;
+				left: 15px;
+				bottom: -50px;
+				}
+				&:focus{
+					outline:none;
+				}
+				&:hover{
+					background-color: darken($secondary-khaki,10%);
+				}
+			}
+		}
+	}
+		#massage{
+			background-image: url("/images/massage-s.jpg");
+			background-repeat: no-repeat;
+			@include cover();
+		}
+		#acupuncture{
+			background-image: url("/images/acupuncture-s.jpg");
+			background-repeat: no-repeat;
+			@include cover();
+		}
+		#general{
+			background-image: url("/images/waiting.jpg");
+			background-repeat: no-repeat;
+			@include cover();
+		}
+}
+
+#overlay {
+	background:rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	display: none;
+	text-align: left;
+	color:$primary-brown;
+	overflow: visible;
+	z-index: 997;
+	.section-wrapper{
+		width: 80%;
+		position: relative;
+		display: block;
+		margin: 2% auto;
+		background-color: $secondary-beige;
+		border-radius: 15px;
+		z-index: 998;
+		.section{
+			width: 90%;
+			position: relative;
+			margin:0 auto;
+			padding: 3% 0;
+			z-index: 999;
+			strong{
+			margin:2% 0;
+			}
+			p{
+					margin:1% auto;
+			}
+		}
+	}
+}
+
+.contact-wrapper{
+	width: 100%;
+	margin:0 auto;
+	.email-holder, .contact-holder, .map-holder{
+		position: relative;
+		width: 32%;
+		min-height: 350px;
+		display: block;
+		float: left;
+		margin:1% 0.66667%;
+	}
+	.email-holder{
+		form{
+			width: 100%;
+		}
+		.box-style{
+			width: 100%;
+			display: block;
+			padding: 18px 15px;
+			margin-top: 0.5%;
+			border:1px solid $secondary-beige;
+			font-family: $primary-font;
+			font-size: 1.2em;
+			letter-spacing: 1px;
+			transition:background-color 0.5s ease;
+			background-color: $white;
+			&:focus{
+				outline:$primary-green;
+				background-color:lighten($accent-blue,12%);
+			}
+		}
+		input[type="submit"]{
+			width: 100%;
+			display: block;
+			padding: 10px 10px;
+			margin-top:1%;
+			background-color:$primary-green;
+		}
+		.name,.phone{
+			width: 49.75%;
+			display: inline-block;
+		}
+		.name{
+			border-top-left-radius: $form-radius;
+		}
+		.phone{
+			border-top-right-radius: $form-radius;
+			margin-left: 0.5%;
+		}
+		.message{
+			min-width: 100%;
+			max-width: 100%;
+			height: 182px;
+			border-bottom-left-radius: $form-radius;
+			border-bottom-right-radius: $form-radius;
+		}
+
+	}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  
+  @media(min-width: 400px) {
+    display: inline-block;
+    margin-right: 2.5em;
+  
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+  
+  @media(min-width: 600px) {
+  
+    &:nth-of-type(even) {
+      margin-right: 2.5em;
+    }
+    
+    &:nth-of-type(5) {
+      margin-right: 0;
+    }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+
+.btn-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+	.contact-holder{
+	border:1px solid $secondary-beige;
+	background-color: $white;
+	border-radius: $form-radius;
+		.info{
+			width: 100%;
+			float: left;
+			#address{
+				margin-top: 50px;
+			}
+			span {
+				width: 100%;
+				margin:3% auto;
+				display: inline-block;
+				text-align: left;
+				font-family: $primary-font;
+
+				h4{
+					width: 80%;
+					margin: 0 auto;
+					font-size: 1.6em;
+					letter-spacing: 1px;
+				}
+				p{
+					width: 80%;
+					margin: 0 auto;
+					font-size: 1.2em;
+				}
+			}
+		}
+	}
+}
+	#map{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 0;	
+		border:2px solid $secondary-beige;
+		border-radius: $form-radius;
+	}
 
 @media screen and (max-width: 1118px){
 
 .nav{
 	width: 60%;
 }
-
 }
 
 @media screen and(max-width: 797px){
 .nav{
 	width: 72%;
+}
+
+.contact-wrapper{
+	.email-holder, .contact-holder, .map-holder{
+			width: 48%;
+			min-height: 350px;
+			margin:1% 1%;
+	}
 }
 }
 
@@ -157,13 +446,13 @@ header,section,footer{
 	margin: 0;
 	padding: 0 !important;
 }
+
 .nav{
 	display: none;
 	span{
 		display: none;
 	}
 }
-
 
 .slicknav_menu{
 	display: block;
@@ -179,6 +468,33 @@ header,section,footer{
 }
 .nav-brand{
 	width: 60%;
+}
+
+.contact-wrapper{
+	.email-holder, .contact-holder, .map-holder{
+			width: 100%;
+			margin:1% auto;
+			min-height: 300px;
+			border-radius: 0px;
+	}
+	.email-holder{
+		.name{
+			border-top-left-radius:0px;
+		}
+		.phone{
+			border-top-right-radius:0px;
+		}
+		.message{
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+
+	}
+	.map-holder{
+		#map{
+			border-radius: 0px;
+		}
+	}
 }
 
 }

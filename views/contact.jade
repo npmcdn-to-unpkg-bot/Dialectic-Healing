@@ -1,6 +1,27 @@
 extends layout
 
 block content
-      h1= title
-      h3 #{moto}
-      p Welcome to #{title}
+      .contact-wrapper
+        .email-holder
+          form(id="form" method="POST")
+            input(class="box-style name" name="name" placeholder="Name: *" type="text")
+            input(class="box-style phone" name="phone" placeholder="Phone: *" type="text")
+            input(class="box-style email" name="email" placeholder="E-Mail: *" type="text")
+            textarea(class="box-style message" name="message" placeholder="Message")
+            input(class="btn btn-5" method="POST" type="submit" value="Submit")
+        .contact-holder
+          .info
+            span(id="address")
+              h4 Address:
+              p 899 Logan Street Suite 204 
+              p Denver, CO 80203
+            span(id="phone")
+              h4 Phone:
+              p 720-295-8053
+            span(id="email")
+              h4 Email:
+              p dialectichealing@gmail.com
+        .map-holder
+          #map
+
+      
