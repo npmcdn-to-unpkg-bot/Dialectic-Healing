@@ -130,6 +130,31 @@ slick {
     text-align: center;
     cursor: pointer; }
 
+/*Home Page*/
+.review {
+  width: 45%;
+  margin: 1% 2.5%;
+  float: left; }
+  .review .author-info {
+    width: 29%;
+    margin: 0 0 0 1%;
+    display: inline-block;
+    vertical-align: top; }
+    .review .author-info img {
+      width: 100%; }
+  .review .review-text {
+    width: 68%;
+    margin: 0 0 0 2%;
+    display: inline-block; }
+    .review .review-text .rating {
+      margin: 0 0 10px 0;
+      text-align: left; }
+    .review .review-text .text p {
+      text-align: justify; }
+  .review .from {
+    margin: 10px 0;
+    width: 100%; }
+
 /*About Page*/
 .about-wrapper {
   width: 100%;

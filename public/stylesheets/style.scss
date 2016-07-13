@@ -129,6 +129,41 @@ slick {
 	}
 }
 
+/*Home Page*/
+.review{
+	width: 45%;
+	margin:1% 2.5%;
+	float: left;
+	.author-info{
+		width: 29%;
+		margin: 0 0 0 1%;
+		display: inline-block;
+		vertical-align: top;
+		img{
+			width: 100%;
+		}
+	}
+	.review-text{
+		width: 68%;
+		margin: 0 0 0 2%;
+		display: inline-block;
+		.rating{
+			margin: 0 0 10px 0;
+			text-align: left;
+		}
+		.text{
+			p{
+			text-align: justify;
+			}
+		}
+	}
+	.from{
+		margin: 10px 0;
+		width: 100%;
+	}
+}
+
+
 /*About Page*/
 .about-wrapper{
 	@include contentWrapper();
