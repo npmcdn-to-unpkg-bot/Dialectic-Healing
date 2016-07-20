@@ -36,6 +36,20 @@ a {
 	margin: 1% auto;
 }
 
+@mixin homeHeader(){
+	h1{
+		font-family: $primary-font;
+		font-weight: 300;
+		margin: 5% 0 1%;
+		text-align: center;
+	}
+}
+
+@mixin thinHeader(){
+	font-family: $primary-font;
+	font-weight: 300;
+}
+
 @mixin backdrop(){
 	background-color: rgba(255,255,255,0.6);
 	border-radius: 10px;
@@ -63,6 +77,17 @@ a {
 	background: -o-linear-gradient($direction, $gradients...); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient($direction, $gradients...); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to $direction, $gradients...);
+}
+
+@mixin containerGradient(){
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
 }
 
 @mixin bottomRound($radius){

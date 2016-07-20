@@ -1,6 +1,6 @@
 @import 'partials/variables';
 @import 'partials/mixins';
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:600);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 
 /*Override*/
 .navbar-nav>li>.dropdown-menu {
@@ -40,6 +40,9 @@ body {
 
 a {
   color: #000000;
+}
+p {
+  margin:0;
 }
 
 header, section, footer{
@@ -109,9 +112,10 @@ header, section, footer{
 	width: 100%;
 	display: inline-block;
 	text-align: center;
-	font-family: $primary-font;
+	font-family: "Helvetica", "Arial", sans-serif;
 	letter-spacing: 1px;
 	font-size: 1em;
+	background-color: $white;
 	p{
 		margin:0;
 	}
@@ -119,61 +123,209 @@ header, section, footer{
 		display: inline-block;
 	}
 }
-
-slick {
-	width: 75%;
-	margin: 0 auto;
-	div{
-		text-align: center;
-		cursor:pointer;
-	}
+.contact p{
+	margin-top:10px;
+}
+.copy p{
+	margin-bottom: 10px;
 }
 
 /*Home Page*/
-.review{
-	width: 45%;
-	margin:1% 2.5%;
-	float: left;
-	.author-info{
-		width: 29%;
-		margin: 0 0 0 1%;
-		display: inline-block;
-		vertical-align: top;
-		img{
-			width: 100%;
-		}
+.slick-container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 0px !important;
+	div{
+		cursor:pointer;
 	}
-	.review-text{
-		width: 68%;
-		margin: 0 0 0 2%;
-		display: inline-block;
-		.rating{
-			margin: 0 0 10px 0;
-			text-align: left;
-		}
-		.text{
-			p{
-			text-align: justify;
+	.slick-dots{
+	bottom:5px;
+		li{
+			margin: 0 8px;
+			button:before{
+			font-size: 10px;
+			color: darken($secondary-khaki,15%);
 			}
 		}
-	}
-	.from{
-		margin: 10px 0;
-		width: 100%;
+
 	}
 }
 
+.slick-dots li.slick-active button:before {
+	color: darken($secondary-khaki,30%) !important;
+}
+.intro{
+min-height: 484px;
+float:left;
+width: 100%;
+@include containerGradient();
+}
+
+
+
+
+.welcome{
+	width: 100%;
+	margin:3% auto;
+	height: auto;
+	text-align: center;
+	@include homeHeader();
+	
+	h3{
+		@include thinHeader();
+		text-align: center;
+		margin: 0 0 2%;
+	}
+
+	a{
+		display: block;
+		width: 30%;
+		margin: 6% auto 0;
+		border-radius: 10px;
+		h4{
+			@include thinHeader();
+			width: 100%;
+			padding: 8%;
+			background-color: lighten(tomato,25%);
+			border: 1px solid darken(tomato,5%);
+			transition: all 0.5s ease;
+		}
+
+		&:hover h4{
+			background-color: lighten(tomato,15%);
+			color: $white;
+		}
+
+		&:hover, &:focus{
+			text-decoration: none;
+			color: #000000;
+		}
+
+		
+	}
+
+	.text-holder{
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+		color: #000000;
+		h4{
+			font-family: $primary-font;
+			font-weight: 300;
+			line-height: 1.2;
+			color: #000000;
+		}
+	}
+}
+
+.service-intro-holder{
+	width: 100%;
+	margin: 3% auto;
+	height: auto;
+	@include homeHeader();
+	.price-holder{
+		width: 70%;
+		margin:0 auto;
+		.introduction{
+			width: 100%;
+			margin: 1% auto 0.5%;
+			height: 120px;
+			float: left;
+			text-align: center;
+			position: relative;
+			clear: both;
+			$color: $primary-brown;
+			background-color: $accent-blue;
+			border: 1px solid darken($accent-blue,8%);
+
+			h2{
+				@include thinHeader();
+				margin-top:30px;
+			}
+			h4{
+				@include thinHeader();
+			}
+		}
+		.plan-container{
+			width: 32.666667%;
+			margin: 0.5% 0;
+			height: 120px;
+			float: left;
+			text-align: center;
+			position: relative;
+			color:invert(lighten($primary-green,12%));
+			background-color: lighten($primary-green,12%);
+			border: 1px solid darken($primary-green,4%);
+			h2,h4{
+				@include thinHeader();
+				
+			}
+			
+			&:nth-child(2){
+				margin-left:0;
+			}
+			&:nth-child(3){
+				margin: 0.5% 1%;
+			}
+			&:nth-child(4){
+				margin-right:0;
+			}
+		}
+	}
+
+}
+
+.testimonials-holder{
+	width: 100%;
+	margin: 3% auto;
+	height: auto;
+	@include homeHeader();
+		.grid{
+			width: 90%;
+			.grid-item{
+				width: 48%;
+				display: inline-block;
+				background:none;
+			}
+			.index-testimonial{
+				vertical-align: top;
+			}
+		}
+}
+
+
+
 
 /*About Page*/
+
 .about-wrapper{
-	@include contentWrapper();
-	@include backdrop();
-	.about-practitioner{
-	  width: 90%;
-	  margin:0 auto;
-	  padding: 3% 0 3% 0;
+
+	h2{
+		text-align: center;
+		@include thinHeader();
+	}
+
+	.practitioner{
+		@include containerGradient();
+		border-radius: 10px;
+		width: 98%;
+		margin: 0 auto;
+		h2{
+			text-align: center;
+			width: 100%;
+			margin-bottom: 1%;
+			@include thinHeader();
+			display: block;
+			float: left;
+		}
+		.about-practitioner{
+		  width: 90%;
+		  margin:0 auto;
+		  padding: 3% 0 3% 0;
+
 	  p{
-	  	text-indent: 40px;
+	  	text-indent: 30px;
 	  	text-align: justify;
 	  	color:#000000;
 	  }
@@ -185,15 +337,104 @@ slick {
 	  padding: 3% 0 3% 0;
 	  height: auto;
 	  float: left;
-	  img{
-	  	border-radius: 50%;
-	    width: 100%;
-	    margin: 0 auto;
-	    display: inline-block;
-	  }
+			  img{
+			  	border-radius: 50%;
+			  	border: 8px solid $primary-green;
+			    width: 95%;
+			    margin: 0 auto;
+			    display: inline-block;
+			  }
 	  
+		}
 	}
 }
+
+.reviews, .grid{
+	vertical-align: top;
+	width: 100%;
+	margin:1% auto;
+	display: block;
+	@include homeHeader();
+
+	.grid-size, .review, .grid-item{
+		width: 48%;
+		margin: 1%;
+		border-radius: 10px;
+		padding: 1% 0;
+		@include containerGradient();
+		.author-info{
+			margin-top: 6px;
+			width: 29%;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			img{
+				width: 70%;
+				display: block;
+				margin: 0 auto;
+				border-radius: 50%;
+				border: 4px solid $primary-green;
+			}
+			.date{
+			margin-top:4px;
+			}
+			.name{
+				margin-top: 10px;
+				color: darken($accent-blue,35%);
+			}
+		
+			.rating{
+				margin: 2% 0;
+				text-align: center;
+				.review-score{
+					font-size: 18px;
+					padding: 2px;
+					margin-right: 2px;
+					border:1px solid ‎#FFD700;
+					color:#666666;
+					.filled{
+						color: tomato;
+					}
+					span {
+						transition: all 0.5s ease;
+					}
+					&:hover span{
+						margin-right: 3px;
+						font-size: 19px;
+						transition: all 0.5s ease;
+					}
+				}
+			}
+
+		}
+
+		.review-text{
+		width: 68%;
+		margin: 0 0 0 2%;
+		display: inline-block;
+			.text {
+						width: 90%;
+						margin: 0 0 0 2%;
+						display: inline-block;
+				 	 p{
+				 	 	width: 90%;
+				 	 	display: block;
+				 	 	margin: 0 auto;
+				 	 }
+					 p i{
+					 	font-size: 10px;
+					 }
+				 }
+
+			}
+		
+		}
+	}
+
+.grid-size{
+	display: none;
+}
+		
 
 @mixin threes(){
 	width: 90%;
@@ -204,14 +445,16 @@ slick {
 /*FAQ page*/
 .faq-wrapper{
 	width: 100%;
-	margin: 1% auto;
 	text-align: center;
 	
 	.initial-sections{
 		width: 100%;
 		height: auto;
-		margin: 0 auto 3% auto;
+		margin: 0 auto;
+		padding: 3% 0;
 		float: left;
+		border-radius: 10px;
+		@include containerGradient();
 
 		.button-block{
 			width: 25%;
@@ -224,15 +467,15 @@ slick {
 				position: relative;
 				@include threes();
 				border-radius: 50%;
-				border: 8px solid $white;
+				border: 8px solid $primary-green;
 				background-color: #EEEEEE;
 				margin-bottom: 1%;
 				h2{
 				width: 200px;
 				position: absolute;
-				font-family: $primary-font;
+				@include thinHeader();
 				font-size: 1.4em;
-				letter-spacing: 1px;
+				font-weight: 400;
 				color: $primary-brown;
 				left: 15px;
 				bottom: -50px;
@@ -298,6 +541,8 @@ slick {
 		}
 	}
 }
+
+/*Contact Page*/
 
 .contact-wrapper{
 	width: 100%;
@@ -412,18 +657,18 @@ slick {
   text-shadow: 1px 1px 2px #427388; 
 }
 	.contact-holder{
-	border:1px solid $secondary-beige;
 	background-color: $white;
 	border-radius: $form-radius;
 		.info{
 			width: 100%;
 			float: left;
+			margin-bottom: 25px;
 			#address{
-				margin-top: 50px;
+				margin-top: 25px;
 			}
 			span {
 				width: 100%;
-				margin:3% auto;
+				margin:1% auto;
 				display: inline-block;
 				text-align: left;
 				font-family: $primary-font;
@@ -431,13 +676,18 @@ slick {
 				h4{
 					width: 80%;
 					margin: 0 auto;
-					font-size: 1.6em;
-					letter-spacing: 1px;
+					@include thinHeader();
+					font-weight: 400;
 				}
 				p{
+					@include thinHeader();
 					width: 80%;
-					margin: 0 auto;
-					font-size: 1.2em;
+					margin: 2px auto;
+				}
+				strong{
+					@include thinHeader();
+					font-weight: 400;
+					margin: 2px 0;
 				}
 			}
 		}
@@ -504,6 +754,14 @@ header,section,footer{
 .nav-brand{
 	width: 60%;
 }
+
+/*.slick-track[style] {
+    width: 100% !important;
+    transform: none !important;
+}
+.slick-slide[style] {
+    display: block !important;
+}*/
 
 .contact-wrapper{
 	.email-holder, .contact-holder, .map-holder{

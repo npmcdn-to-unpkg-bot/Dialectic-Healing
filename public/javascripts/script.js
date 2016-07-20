@@ -2,6 +2,7 @@ $(window).resize(function(){
     displaySpan(); 
     setButtonHeight();
     setWindowHeight('#overlay');
+    
 });
 
 $(document).ready(function(){
@@ -10,36 +11,14 @@ $(document).ready(function(){
     faqPage();
     setButtonHeight();
     appendSymbols();
-
-
-    $('.nav').slicknav({
-        label: '',
-        prependTo: '#navigation'
-    });
-
-    $('.animsition').animsition({
-        inClass: 'fade-in',
-        outClass: 'fade-out',
-        inDuration: 1200,
-        outDuration: 500,
-        linkElement: '.animsition-link',
-        // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-        loading: true,
-        loadingParentElement: 'body', //animsition wrapper element
-        loadingClass: 'animsition-loading',
-        loadingInner: '', // e.g '<img src="loading.svg" />'
-        timeout: false,
-        timeoutCountdown: 5000,
-        onLoadEvent: true,
-        browser: [ 'animation-duration', '-webkit-animation-duration'],
-        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-        overlay : false,
-        overlayClass : 'animsition-overlay-slide',
-        overlayParentElement : 'body',
-        transition: function(url){ window.location.href = url; }
-        });    
 });
+
+var $grid = $('.reviews').masonry({
+    itemSelector: '.review',
+    columnWidth: '.grid-size',
+    percentPosition: true
+});      
+
 
 function setActivePage(){
     var currentUrl = location.href;
@@ -74,14 +53,6 @@ function displaySpan(){
     }
 }
 
-// function dropDownToggle(){
-//     $('.nav li').hover(function(event){
-//         event.stopzDefaul();ss
-//         if($(this).find('ul')){
-//             $('.dropdown-menu')stop().slideToggle(500);
-//         }
-//     });
-// }
 
 function setButtonHeight(){
      $buttonWidth = $('#massage').outerWidth();
@@ -138,3 +109,5 @@ function appendSymbols(){
     $strong.append(" ");
     $strong.append($question);
 }
+
+
