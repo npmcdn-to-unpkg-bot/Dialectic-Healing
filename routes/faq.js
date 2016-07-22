@@ -6,8 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('faq', { 
   			 title: 'DH | F.A.Q',
   			 header: 'Frequently Asked Questions',
-  			 moto: 'This is F.A.Q Page' 
-  						});
+  			 styles: [],
+  			 scripts: [],
+  			 moto: 'This is F.A.Q Page',
+
+  	});
 });
 
 module.exports = router;

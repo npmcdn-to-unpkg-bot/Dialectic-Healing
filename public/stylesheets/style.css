@@ -2,139 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 @mixing gradientLinear($start,$stop) {
   /* Standard syntax */ }
-/*Override*/
-.navbar-nav > li > .dropdown-menu {
-  border-image: none;
-  border: none;
-  box-shadow: none;
-  margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px; }
-
-.section .fa-times {
-  position: absolute;
-  top: 10px;
-  right: -30px;
-  font-size: 2em;
-  color: tomato; }
-  .section .fa-times:hover {
-    cursor: pointer; }
-
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: no-repeat center right fixed;
-  background-color: #c4d9bf;
-  background: #c4d9bf, #FFFCD6;
-  /* For browsers that do not support gradients */
-  background: -o-linear-gradient(right, #c4d9bf, #FFFCD6);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #c4d9bf, #FFFCD6);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #c4d9bf, #FFFCD6);
-  -webkit-backgroun-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale');
-  margin: 0px !important;
-  padding: 0px !important; }
-
-a {
-  color: #000000; }
-
-p {
-  margin: 0; }
-
-header, section, footer {
-  float: none !important;
-  margin: 1% 0; }
-
-.nav:not(.dropdown-menu) > .active > a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100% !important;
-  border-bottom: 1px solid #333333; }
-
-.nav-brand {
-  width: 30%;
-  margin: 10px auto;
-  padding: 10px;
-  text-align: center;
-  float: none; }
-  .nav-brand img {
-    width: 100%; }
-
-.slicknav_menu {
-  display: none; }
-
-#navigation {
-  background-color: #FFFFFF; }
-
-.nav {
-  float: none;
-  width: 50%;
-  margin: 5px auto;
-  display: flex; }
-  .nav li {
-    margin: 0 auto;
-    padding: 3px 12px 5px 12px;
-    background-color: #FFFFFF; }
-    .nav li a {
-      text-decoration: none;
-      position: relative;
-      color: #333333;
-      padding: 3px 8px 4px 8px; }
-      .nav li a:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        border-bottom: 1px solid #333333;
-        transition: 0.4s; }
-      .nav li a:hover:after {
-        width: 100%; }
-    .nav li a {
-      font-family: "Helvetica", "Arial", sans-serif; }
-      .nav li a:hover, .nav li a:focus {
-        background-color: transparent; }
-      .nav li a span {
-        display: inline-block;
-        font-size: 0.5em; }
-    .nav li:hover .dropdown-menu {
-      background-color: transparent;
-      display: block;
-      box-shadow: none; }
-
-.contact, .copy {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  font-family: "Helvetica", "Arial", sans-serif;
-  letter-spacing: 1px;
-  font-size: 1em;
-  background-color: #FFFFFF; }
-  .contact p, .copy p {
-    margin: 0; }
-  .contact a, .copy a {
-    display: inline-block; }
-
-.contact p {
-  margin-top: 10px; }
-
-.copy p {
-  margin-bottom: 10px; }
-
-/*Home Page*/
 .slick-container {
   width: 100%;
   height: auto;
@@ -278,7 +145,6 @@ header, section, footer {
     .testimonials-holder .grid .index-testimonial {
       vertical-align: top; }
 
-/*About Page*/
 .about-wrapper h2 {
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -399,7 +265,6 @@ header, section, footer {
 .grid-size {
   display: none; }
 
-/*FAQ page*/
 .faq-wrapper {
   width: 100%;
   text-align: center; }
@@ -513,7 +378,6 @@ header, section, footer {
       #overlay .section-wrapper .section p {
         margin: 1% auto; }
 
-/*Contact Page*/
 .contact-wrapper {
   width: 100%;
   margin: 0 auto; }
@@ -639,6 +503,141 @@ header, section, footer {
   border: 2px solid #FFFCD6;
   border-radius: 15px; }
 
+/*Override*/
+.navbar-nav > li > .dropdown-menu {
+  border-image: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.section .fa-times {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  font-size: 2em;
+  color: tomato; }
+  .section .fa-times:hover {
+    cursor: pointer; }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: no-repeat center right fixed;
+  background-color: #c4d9bf;
+  background: #c4d9bf, #FFFCD6;
+  /* For browsers that do not support gradients */
+  background: -o-linear-gradient(right, #c4d9bf, #FFFCD6);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #c4d9bf, #FFFCD6);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #c4d9bf, #FFFCD6);
+  -webkit-backgroun-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/spa-treatments-to-try.png', sizingMethod='scale');
+  margin: 0px !important;
+  padding: 0px !important; }
+
+a {
+  color: #000000; }
+
+p {
+  margin: 0; }
+
+header, section, footer {
+  float: none !important;
+  margin: 1% 0; }
+
+.nav:not(.dropdown-menu) > .active > a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;
+  border-bottom: 1px solid #333333; }
+
+.nav-brand {
+  width: 30%;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  float: none; }
+  .nav-brand img {
+    width: 100%; }
+
+.slicknav_menu {
+  display: none; }
+
+#navigation {
+  background-color: #FFFFFF; }
+
+.nav {
+  float: none;
+  width: 50%;
+  margin: 5px auto;
+  display: flex; }
+  .nav li {
+    margin: 0 auto;
+    padding: 3px 12px 5px 12px;
+    background-color: #FFFFFF; }
+    .nav li a {
+      text-decoration: none;
+      position: relative;
+      color: #333333;
+      padding: 3px 8px 4px 8px; }
+      .nav li a:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        border-bottom: 1px solid #333333;
+        transition: 0.4s; }
+      .nav li a:hover:after {
+        width: 100%; }
+    .nav li a {
+      font-family: "Helvetica", "Arial", sans-serif; }
+      .nav li a:hover, .nav li a:focus {
+        background-color: transparent; }
+      .nav li a span {
+        display: inline-block;
+        font-size: 0.5em; }
+    .nav li:hover .dropdown-menu {
+      background-color: transparent;
+      display: block;
+      box-shadow: none; }
+
+.contact, .copy {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 1em;
+  background-color: #FFFFFF; }
+  .contact p, .copy p {
+    margin: 0; }
+  .contact a, .copy a {
+    display: inline-block; }
+
+.contact p {
+  margin-top: 10px; }
+
+.copy p {
+  margin-bottom: 10px; }
+
+/*Home Page*/
+/*About Page*/
+/*FAQ page*/
+/*Contact Page*/
 @media screen and (max-width: 1118px) {
   .nav {
     width: 60%; } }

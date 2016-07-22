@@ -5,8 +5,10 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { 
   			 title: 'Dialectic Healing',
-  			 moto: 'Ancient wisdom. Modern technique.' 
-  						});
+  			 moto: 'Ancient wisdom. Modern technique.',
+  			 styles: [],
+  			 scripts: [],
+  	});
 });
 
 module.exports = router;

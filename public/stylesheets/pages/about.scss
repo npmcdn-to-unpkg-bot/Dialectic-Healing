@@ -1,0 +1,142 @@
+.about-wrapper{
+
+	h2{
+		text-align: center;
+		@include thinHeader();
+	}
+
+	.practitioner{
+		@include containerGradient();
+		border-radius: 10px;
+		width: 98%;
+		margin: 0 auto;
+		h2{
+			text-align: center;
+			width: 100%;
+			margin-bottom: 1%;
+			@include thinHeader();
+			display: block;
+			float: left;
+		}
+		.about-practitioner{
+		  width: 90%;
+		  margin:0 auto;
+		  padding: 3% 0 3% 0;
+
+	  p{
+	  	text-indent: 30px;
+	  	text-align: justify;
+	  	color:#000000;
+	  }
+	}
+
+	.portrait-container{
+	  width: 25%;
+	  margin: 0 2% 2% 4%;
+	  padding: 3% 0 3% 0;
+	  height: auto;
+	  float: left;
+			  img{
+			  	border-radius: 50%;
+			  	border: 8px solid $primary-green;
+			    width: 95%;
+			    margin: 0 auto;
+			    display: inline-block;
+			  }
+	  
+		}
+	}
+}
+
+.reviews, .grid{
+	vertical-align: top;
+	width: 100%;
+	margin:1% auto;
+	display: block;
+	@include homeHeader();
+
+	.grid-size, .review, .grid-item{
+		width: 48%;
+		margin: 1%;
+		border-radius: 10px;
+		padding: 1% 0;
+		@include containerGradient();
+		.author-info{
+			margin-top: 6px;
+			width: 29%;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			img{
+				width: 70%;
+				display: block;
+				margin: 0 auto;
+				border-radius: 50%;
+				border: 4px solid $primary-green;
+			}
+			.date{
+			margin-top:4px;
+			}
+			.name{
+				margin-top: 10px;
+				color: darken($accent-blue,35%);
+			}
+		
+			.rating{
+				margin: 2% 0;
+				text-align: center;
+				.review-score{
+					font-size: 18px;
+					padding: 2px;
+					margin-right: 2px;
+					border:1px solid ‎#FFD700;
+					color:#666666;
+					.filled{
+						color: tomato;
+					}
+					span {
+						transition: all 0.5s ease;
+					}
+					&:hover span{
+						margin-right: 3px;
+						font-size: 19px;
+						transition: all 0.5s ease;
+					}
+				}
+			}
+
+		}
+
+		.review-text{
+		width: 68%;
+		margin: 0 0 0 2%;
+		display: inline-block;
+			.text {
+						width: 90%;
+						margin: 0 0 0 2%;
+						display: inline-block;
+				 	 p{
+				 	 	width: 90%;
+				 	 	display: block;
+				 	 	margin: 0 auto;
+				 	 }
+					 p i{
+					 	font-size: 10px;
+					 }
+				 }
+
+			}
+		
+		}
+	}
+
+.grid-size{
+	display: none;
+}
+		
+
+@mixin threes(){
+	width: 90%;
+	margin: 1% auto;
+	display: block;
+}

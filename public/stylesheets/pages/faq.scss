@@ -1,0 +1,98 @@
+.faq-wrapper{
+	width: 100%;
+	text-align: center;
+	
+	.initial-sections{
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 3% 0;
+		float: left;
+		border-radius: 10px;
+		@include containerGradient();
+
+		.button-block{
+			width: 25%;
+			height: auto;
+			margin: 0 4.166% 2% 4.166%;
+			display: inline-block;
+			float: left;
+			position: relative;
+			button{
+				position: relative;
+				@include threes();
+				border-radius: 50%;
+				border: 8px solid $primary-green;
+				background-color: #EEEEEE;
+				margin-bottom: 1%;
+				h2{
+				width: 200px;
+				position: absolute;
+				@include thinHeader();
+				font-size: 1.4em;
+				font-weight: 400;
+				color: $primary-brown;
+				left: 15px;
+				bottom: -50px;
+				}
+				&:focus{
+					outline:none;
+				}
+				&:hover{
+					background-color: darken($secondary-khaki,10%);
+				}
+			}
+		}
+	}
+		#massage{
+			background-image: url("/images/massage-s.jpg");
+			background-repeat: no-repeat;
+			@include cover();
+		}
+		#acupuncture{
+			background-image: url("/images/acupuncture-s.jpg");
+			background-repeat: no-repeat;
+			@include cover();
+		}
+		#general{
+			background-image: url("/images/waiting.jpg");
+			background-repeat: no-repeat;
+			@include cover();
+		}
+}
+
+#overlay {
+	background:rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	display: none;
+	text-align: left;
+	color:$primary-brown;
+	overflow: visible;
+	z-index: 997;
+	.section-wrapper{
+		width: 80%;
+		position: relative;
+		display: block;
+		margin: 2% auto;
+		background-color: $secondary-beige;
+		border-radius: 15px;
+		z-index: 998;
+		.section{
+			width: 90%;
+			position: relative;
+			margin:0 auto;
+			padding: 3% 0;
+			z-index: 999;
+			strong{
+			margin:2% 0;
+			}
+			p{
+					margin:1% auto;
+			}
+		}
+	}
+}

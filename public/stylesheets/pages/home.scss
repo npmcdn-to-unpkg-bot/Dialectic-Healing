@@ -1,0 +1,162 @@
+.slick-container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 0px !important;
+	div{
+		cursor:pointer;
+	}
+	.slick-dots{
+	bottom:5px;
+		li{
+			margin: 0 8px;
+			button:before{
+			font-size: 10px;
+			color: darken($secondary-khaki,15%);
+			}
+		}
+
+	}
+}
+
+.slick-dots li.slick-active button:before {
+	color: darken($secondary-khaki,30%) !important;
+}
+.intro{
+min-height: 484px;
+float:left;
+width: 100%;
+@include containerGradient();
+}
+
+
+
+
+.welcome{
+	width: 100%;
+	margin:3% auto;
+	height: auto;
+	text-align: center;
+	@include homeHeader();
+	
+	h3{
+		@include thinHeader();
+		text-align: center;
+		margin: 0 0 2%;
+	}
+
+	a{
+		display: block;
+		width: 30%;
+		margin: 6% auto 0;
+		border-radius: 10px;
+		h4{
+			@include thinHeader();
+			width: 100%;
+			padding: 8%;
+			background-color: lighten(tomato,25%);
+			border: 1px solid darken(tomato,5%);
+			transition: all 0.5s ease;
+		}
+
+		&:hover h4{
+			background-color: lighten(tomato,15%);
+			color: $white;
+		}
+
+		&:hover, &:focus{
+			text-decoration: none;
+			color: #000000;
+		}
+
+		
+	}
+
+	.text-holder{
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+		color: #000000;
+		h4{
+			font-family: $primary-font;
+			font-weight: 300;
+			line-height: 1.2;
+			color: #000000;
+		}
+	}
+}
+
+.service-intro-holder{
+	width: 100%;
+	margin: 3% auto;
+	height: auto;
+	@include homeHeader();
+	.price-holder{
+		width: 70%;
+		margin:0 auto;
+		.introduction{
+			width: 100%;
+			margin: 1% auto 0.5%;
+			height: 120px;
+			float: left;
+			text-align: center;
+			position: relative;
+			clear: both;
+			$color: $primary-brown;
+			background-color: $accent-blue;
+			border: 1px solid darken($accent-blue,8%);
+
+			h2{
+				@include thinHeader();
+				margin-top:30px;
+			}
+			h4{
+				@include thinHeader();
+			}
+		}
+		.plan-container{
+			width: 32.666667%;
+			margin: 0.5% 0;
+			height: 120px;
+			float: left;
+			text-align: center;
+			position: relative;
+			color:invert(lighten($primary-green,12%));
+			background-color: lighten($primary-green,12%);
+			border: 1px solid darken($primary-green,4%);
+			h2,h4{
+				@include thinHeader();
+				
+			}
+			
+			&:nth-child(2){
+				margin-left:0;
+			}
+			&:nth-child(3){
+				margin: 0.5% 1%;
+			}
+			&:nth-child(4){
+				margin-right:0;
+			}
+		}
+	}
+
+}
+
+.testimonials-holder{
+	width: 100%;
+	margin: 3% auto;
+	height: auto;
+	@include homeHeader();
+		.grid{
+			width: 90%;
+			.grid-item{
+				width: 48%;
+				display: inline-block;
+				background:none;
+			}
+			.index-testimonial{
+				vertical-align: top;
+			}
+		}
+}

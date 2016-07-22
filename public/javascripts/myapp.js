@@ -77,9 +77,7 @@ function runSlider(){
             speed:1000
             });
         }
-        // else{
-        //     $carousel.slick("unslick");
-        // }
+        
     }else{
          $carousel.slick("unslick");
     }
