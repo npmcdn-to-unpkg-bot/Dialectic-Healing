@@ -31,6 +31,19 @@ a {
 	}
 }
 
+@mixin rotate($degree){
+	-ms-transform:rotate($degree);
+    -moz-transform:rotate($degree);
+    -webkit-transform:rotate($degree);
+    transform:rotate($degree);
+}
+
+@mixin transitionLinear($speed){
+	-moz-transition: all $speed linear;
+    -webkit-transition: all $speed linear;
+    transition: all $speed linear;
+}
+
 @mixin contentWrapper(){
 	width: 100%;
 	margin: 1% auto;
@@ -93,4 +106,75 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 @mixin bottomRound($radius){
 	border-bottom-right-radius:$radius;
 	border-bottom-left-radius:$radius;
+}
+
+@mixin serviceBlock($height){
+	.price-holder{
+		width: 80%;
+		margin:0 auto;
+		position: relative;
+		.plan-container{
+			width: 32.666667%;
+			margin: 0.5% 0;
+			height: $height;
+			float: left;
+			text-align: center;
+			position: relative;
+			background-color: lighten($primary-green,12%);
+			border: 1px solid darken($primary-green,4%);
+			h2,h3,h4,p{
+				@include thinHeader();
+				display: block;
+				color:$white;
+				font-size: 1.3em;
+				font-weight: 400;
+			}
+			h4{
+				width: 65px;
+				margin:15px auto;
+				padding: 5px 0;
+				border-radius: 20px;
+				background-color: $white;
+				color:invert(lighten($primary-green,12%));
+				font-weight: 300;
+			}
+			h3{
+				width: 200px;
+				margin: 2px auto;
+				padding-bottom: 10px;
+				border-bottom: 1px solid $white;
+				font-size: 1.1em;
+			}
+			p{
+				width: 200px;
+				margin: 2px auto;
+				font-size: 1em;
+			}
+			&:first-child{
+				width: 100%;
+				margin: 1% auto 0.5%;
+				float: left;
+				position: relative;
+				clear: both;
+				text-align: center;
+				$color: $primary-brown;
+				background-color: $accent-blue;
+				border: 1px solid darken($accent-blue,8%);
+				border-top-right-radius: 25px;
+				border-top-left-radius: 25px;
+			}
+			
+			&:nth-child(2){
+				margin-left:0;
+				border-bottom-left-radius: 25px;
+			}
+			&:nth-child(3){
+				margin: 0.5% 1%;
+			}
+			&:nth-child(4){
+				margin-right:0;
+				border-bottom-right-radius: 25px;
+			}
+		}
+	}
 }

@@ -111,3 +111,33 @@ function appendSymbols(){
 }
 
 
+
+function servicePage(){
+$('.services li').on('click', function(){
+    $('.services li .benefits').each(function(){
+        if($(this).css('display') == 'block'){
+            $(this).prev().find('.fa').toggleClass('down');
+            $(this).slideToggle("slow","linear");
+    }
+});
+    $arrow = $(this).find('.fa');
+    $info = $(this).find('.benefits');
+
+    if($info.css('display')== 'block'){
+        $arrow.removeClass('down');
+        $info.slideUp("slow","linear");
+    }else{
+        setTimeout(function(){
+            console.log("hello");
+                    
+            $arrow.toggleClass('down');
+            $info.slideToggle("slow","linear");
+        }, 600);
+    }
+});
+    
+}
+
+servicePage();
+
+

@@ -72,8 +72,8 @@ function runSlider(){
             arrows:false,
             dots:true,
             slidesToShow:1,
-            autoPlay:true,
-            autoPlaySpeed:4000,
+            autoplay:true,
+            autoplaySpeed:4000,
             speed:1000
             });
         }

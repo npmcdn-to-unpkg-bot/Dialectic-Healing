@@ -1,5 +1,26 @@
 extends layout
 
 block content
-      <!-- h1(class="header")= header -->
+		.services-container
+			.massages
+				ul.services
+					each service in services
+						li 
+							p #{service.name} &nbsp;
+								i(class="fa fa-chevron-right" aria-hidden="true")
+							ul(class="benefits" id="#{service.id}")
+								each benefit in service.benefits
+									li 
+										p 
+											i(class="fa fa-circle" aria-hidden="true")
+											| &nbsp; #{benefit}
+
+			.price-holder
+				each plan in plans
+					.plan-container
+						h2 #{plan.time}
+						h3.title #{plan.title}
+						p.notes &bull; #{plan.notes}
+						h4 #{plan.price}
+
       

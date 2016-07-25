@@ -19,61 +19,36 @@ block content
 			.service-intro-holder
 				h1 Pricing Made Easy!
 				.price-holder
-					.introduction
-						h2 Introductory Offer
-						h4 $40 / 1h Massage
-					.plan-container
-						h2 $50 / 
-						h4 1h Massage 
-					.plan-container
-						h2 $75 / 
-						h4 90m Massage
-					.plan-container
-						h2 $100 / 
-						h4 2h Massage 
+					each plan in plans
+						.plan-container
+							h2 #{plan.time}
+							h3.title #{plan.title}
+							h4 #{plan.price}
 		
 		div(class="intro" id="reviews")
 			.testimonials-holder
 				h1 Testimonials
 				.grid
-					div(class="grid-item index-testimonial")
-						.author-info
-							img(src="/images/Michelle R.jpg" alt="Michelle R Portrait")
-							p(class="name") 
-								strong Michelle R.
-							p(class="date") 07/23/2013
-							.rating
+					each review in reviews
+						.div(class="grid-item index-testimonial")
+							.author-info
+								img(src="#{review.img}" alt="#{review.name}")
+								p(class="name")
+									strong #{review.name}
+								p(class="date") #{review.date}
+								.rating
 									span(class="review-score")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-						.review-text
-							.text
-								p 
-									i(class="fa fa-quote-left" aria-hidden="true")
-									|    I've been a client of Jessica's for the past three years and she is by far the BEST masseuse that I have ever worked with.  Jessica is in a class of her own, she gets to know you and your aliments and customizes her sessions to best fit your needs.  She is absolutely wonderful to work with and I am thankful that I found her when I moved to Denver.  Even if you currently have a masseuse that you are working with I would recommend at least one session with Jessica so that you can experience a truly therapeutic and healing massage.  
-									i(class="fa fa-quote-right" aria-hidden="true")
-					div(class="grid-item index-testimonial")
-						.author-info
-							img(src="/images/Joshua H.jpg" alt="Joshua H Portrait")
-							p(class="name") 
-								strong Joshua H.
-							p(class="date") 06/04/2013
-							.rating
-									span(class="review-score")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-										span(class ="glyphicon glyphicon-star filled")
-						.review-text
-							.text
-								p 
-									i(class="fa fa-quote-left" aria-hidden="true")
-									|    I finally found a regular massage therapist that I liked after trying a ton of them, and a few months later she went on maternity leave indefinitely: I was bummed... a friend recommended Jessica. And after the first massage, I was actually happy my old massage therapist had taken a leave because I ended up with a better one! Great rates, hours, location, pressure, technique... couldn't ask for more  
-									i(class="fa fa-quote-right" aria-hidden="true")
+										- for (var x = 0; x < 5; x++)
+											if x < review.rating 
+												span(class ="glyphicon glyphicon-star filled")
+											else if x >= review.rating
+												span(class ="glyphicon glyphicon-star")
+							.review-text
+								.text
+									p 
+										i(class="fa fa-quote-left" aria-hidden="true")
+										|    #{review.text}
+										i(class="fa fa-quote-right" aria-hidden="true")
 				
 			
 

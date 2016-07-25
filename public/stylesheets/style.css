@@ -51,8 +51,7 @@
   .welcome a {
     display: block;
     width: 30%;
-    margin: 6% auto 0;
-    border-radius: 10px; }
+    margin: 6% auto 0; }
     .welcome a h4 {
       font-family: "Lato", sans-serif;
       font-weight: 300;
@@ -60,10 +59,12 @@
       padding: 8%;
       background-color: #ffcfc7;
       border: 1px solid #ff4d2e;
+      border-radius: 25px;
       transition: all 0.5s ease; }
     .welcome a:hover h4 {
       background-color: #ffa494;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      font-weight: 400; }
     .welcome a:hover, .welcome a:focus {
       text-decoration: none;
       color: #000000; }
@@ -88,44 +89,62 @@
     margin: 5% 0 1%;
     text-align: center; }
   .service-intro-holder .price-holder {
-    width: 70%;
-    margin: 0 auto; }
-    .service-intro-holder .price-holder .introduction {
-      width: 100%;
-      margin: 1% auto 0.5%;
-      height: 120px;
-      float: left;
-      text-align: center;
-      position: relative;
-      clear: both;
-      background-color: #C1D4E3;
-      border: 1px solid #a5c1d6; }
-      .service-intro-holder .price-holder .introduction h2 {
-        font-family: "Lato", sans-serif;
-        font-weight: 300;
-        margin-top: 30px; }
-      .service-intro-holder .price-holder .introduction h4 {
-        font-family: "Lato", sans-serif;
-        font-weight: 300; }
+    width: 80%;
+    margin: 0 auto;
+    position: relative; }
     .service-intro-holder .price-holder .plan-container {
       width: 32.666667%;
       margin: 0.5% 0;
-      height: 120px;
+      height: 150px;
       float: left;
       text-align: center;
       position: relative;
-      color: #442b49;
       background-color: #bbd4b6;
       border: 1px solid #8bb582; }
-      .service-intro-holder .price-holder .plan-container h2, .service-intro-holder .price-holder .plan-container h4 {
+      .service-intro-holder .price-holder .plan-container h2, .service-intro-holder .price-holder .plan-container h3, .service-intro-holder .price-holder .plan-container h4, .service-intro-holder .price-holder .plan-container p {
         font-family: "Lato", sans-serif;
+        font-weight: 300;
+        display: block;
+        color: #FFFFFF;
+        font-size: 1.3em;
+        font-weight: 400; }
+      .service-intro-holder .price-holder .plan-container h4 {
+        width: 65px;
+        margin: 15px auto;
+        padding: 5px 0;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        color: #442b49;
         font-weight: 300; }
+      .service-intro-holder .price-holder .plan-container h3 {
+        width: 200px;
+        margin: 2px auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #FFFFFF;
+        font-size: 1.1em; }
+      .service-intro-holder .price-holder .plan-container p {
+        width: 200px;
+        margin: 2px auto;
+        font-size: 1em; }
+      .service-intro-holder .price-holder .plan-container:first-child {
+        width: 100%;
+        margin: 1% auto 0.5%;
+        float: left;
+        position: relative;
+        clear: both;
+        text-align: center;
+        background-color: #C1D4E3;
+        border: 1px solid #a5c1d6;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px; }
       .service-intro-holder .price-holder .plan-container:nth-child(2) {
-        margin-left: 0; }
+        margin-left: 0;
+        border-bottom-left-radius: 25px; }
       .service-intro-holder .price-holder .plan-container:nth-child(3) {
         margin: 0.5% 1%; }
       .service-intro-holder .price-holder .plan-container:nth-child(4) {
-        margin-right: 0; }
+        margin-right: 0;
+        border-bottom-right-radius: 25px; }
 
 .testimonials-holder {
   width: 100%;
@@ -144,6 +163,158 @@
       background: none; }
     .testimonials-holder .grid .index-testimonial {
       vertical-align: top; }
+
+.services-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  float: left; }
+  .services-container .massages {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    float: left;
+    margin-left: 10%; }
+  .services-container .price-holder {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    float: left;
+    margin-left: 10%; }
+
+.services {
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; }
+  .services > li {
+    min-height: 35px;
+    margin: 0;
+    text-align: center;
+    width: 33.3333%;
+    float: left;
+    background: white;
+    background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+    background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+    background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+    background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+    background: linear-gradient(to bottom, white 0%, #f6f6f6 47%, #ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 ); }
+    .services > li > p {
+      padding: 5px 0 10px;
+      font-size: 1.2em; }
+      .services > li > p i {
+        font-size: 0.7em;
+        -moz-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+      .services > li > p .down {
+        -ms-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg); }
+      .services > li > p:nth-child(2) {
+        float: right; }
+    .services > li #acupuncture {
+      float: left; }
+    .services > li #massage {
+      float: left;
+      margin-left: -100%; }
+    .services > li #combination {
+      float: right; }
+    .services > li ul {
+      list-style: none;
+      padding: 8px 0px 20px 40px;
+      font-size: 0.9em;
+      overflow: hidden;
+      top: 40px;
+      width: 300%;
+      margin: 0 auto;
+      border-top: 1px solid #6997bb;
+      display: none;
+      z-index: 1;
+      background: white;
+      background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+      background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+      background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+      background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+      background: linear-gradient(to bottom, white 0%, #f6f6f6 47%, #ededed 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 ); }
+      .services > li ul > li {
+        position: relative;
+        text-align: left;
+        list-style: none;
+        width: 80%; }
+        .services > li ul > li p {
+          padding: 3px 0; }
+          .services > li ul > li p i {
+            font-size: 0.7em;
+            margin-right: 6px;
+            color: #6997bb; }
+
+.price-holder {
+  width: 80%;
+  margin: 0 auto;
+  position: relative; }
+  .price-holder .plan-container {
+    width: 32.666667%;
+    margin: 0.5% 0;
+    height: auto;
+    float: left;
+    text-align: center;
+    position: relative;
+    background-color: #bbd4b6;
+    border: 1px solid #8bb582; }
+    .price-holder .plan-container h2, .price-holder .plan-container h3, .price-holder .plan-container h4, .price-holder .plan-container p {
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      display: block;
+      color: #FFFFFF;
+      font-size: 1.3em;
+      font-weight: 400; }
+    .price-holder .plan-container h4 {
+      width: 65px;
+      margin: 15px auto;
+      padding: 5px 0;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      color: #442b49;
+      font-weight: 300; }
+    .price-holder .plan-container h3 {
+      width: 200px;
+      margin: 2px auto;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #FFFFFF;
+      font-size: 1.1em; }
+    .price-holder .plan-container p {
+      width: 200px;
+      margin: 2px auto;
+      font-size: 1em; }
+    .price-holder .plan-container:first-child {
+      width: 100%;
+      margin: 1% auto 0.5%;
+      float: left;
+      position: relative;
+      clear: both;
+      text-align: center;
+      background-color: #C1D4E3;
+      border: 1px solid #a5c1d6;
+      border-top-right-radius: 25px;
+      border-top-left-radius: 25px; }
+    .price-holder .plan-container:nth-child(2) {
+      margin-left: 0;
+      border-bottom-left-radius: 25px; }
+    .price-holder .plan-container:nth-child(3) {
+      margin: 0.5% 1%; }
+    .price-holder .plan-container:nth-child(4) {
+      margin-right: 0;
+      border-bottom-right-radius: 25px; }
 
 .about-wrapper h2 {
   text-align: center;
@@ -634,10 +805,6 @@ header, section, footer {
 .copy p {
   margin-bottom: 10px; }
 
-/*Home Page*/
-/*About Page*/
-/*FAQ page*/
-/*Contact Page*/
 @media screen and (max-width: 1118px) {
   .nav {
     width: 60%; } }
@@ -677,13 +844,6 @@ header, section, footer {
   .nav-brand {
     width: 60%; }
 
-  /*.slick-track[style] {
-      width: 100% !important;
-      transform: none !important;
-  }
-  .slick-slide[style] {
-      display: block !important;
-  }*/
   .contact-wrapper .email-holder, .contact-wrapper .contact-holder, .contact-wrapper .map-holder {
     width: 100%;
     margin: 1% auto;

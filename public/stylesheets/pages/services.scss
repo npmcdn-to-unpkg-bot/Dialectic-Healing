@@ -1,0 +1,89 @@
+.services-container{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	float: left;
+	.massages{
+		position: relative;
+		width: 80%;
+		margin: 0 auto;
+		float: left;
+		margin-left: 10%;
+	}
+	.price-holder{
+		position: relative;
+		width: 80%;
+		margin:0 auto;
+		float: left;
+		margin-left: 10%;
+	}
+}
+
+.services{
+	list-style: none;
+	font-family: $primary-font;
+	font-size: 1.1em;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	> li{
+		min-height: 35px;
+		margin: 0;
+		text-align: center;
+		width: 33.3333%;
+		float: left;
+		@include containerGradient();
+		> p{
+			padding: 5px 0 10px;
+			font-size: 1.2em;
+			i{
+				font-size: 0.7em;
+				@include transitionLinear(0.3s);
+			}
+			.down{
+		    	@include rotate(90deg);
+			}
+			&:nth-child(2){
+				float: right;
+			}
+		}
+		#acupuncture{float: left;}
+		#massage{
+			float: left;
+			margin-left:-100%;
+		}
+		#combination{float: right;}
+		ul{
+			list-style: none;
+			padding:8px 0px 20px 40px;
+			font-size: 0.9em;
+			overflow: hidden;
+			top:40px;
+			width: 300%;
+			margin:0 auto;
+			border-top:1px solid darken($accent-blue,25%);
+			display:none;
+			z-index: 1;
+			@include containerGradient();
+
+			> li{
+				position: relative;
+				text-align: left;
+				list-style: none;
+				width: 80%;
+				p{
+					padding: 3px 0;
+					i{
+						font-size: 0.7em;
+						margin-right: 6px;
+						color: darken($accent-blue,25%);
+					}
+				} 
+			}
+		}
+	}
+}
+
+@include serviceBlock(auto);
