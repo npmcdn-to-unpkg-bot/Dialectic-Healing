@@ -79,6 +79,8 @@ function runSlider(){
         }
         
     }else{
-         $carousel.slick("unslick");
+        if($carousel.hasClass('slick-initialized')){
+            $carousel.slick("unslick");
+        }
     }
 }
