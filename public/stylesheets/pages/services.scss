@@ -86,4 +86,8 @@
 	}
 }
 
-@include serviceBlock(auto);
+@include serviceBlock(auto, darken($primary-brown,10%));
+
+@media screen and (max-width: 1118px){}
+@media screen and(max-width: 797px){}
+@media screen and (max-width: 650px){}

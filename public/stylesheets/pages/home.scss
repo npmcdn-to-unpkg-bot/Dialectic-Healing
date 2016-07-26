@@ -28,9 +28,6 @@ width: 100%;
 @include containerGradient();
 }
 
-
-
-
 .welcome{
 	width: 100%;
 	margin:3% auto;
@@ -91,7 +88,7 @@ width: 100%;
 	margin: 3% auto;
 	height: auto;
 	@include homeHeader();
-	@include serviceBlock(150px);
+	@include serviceBlock(150px, darken($primary-brown,10%));
 
 }
 
@@ -111,4 +108,132 @@ width: 100%;
 				vertical-align: top;
 			}
 		}
+}
+
+@media screen and (max-width: 1118px){
+
+
+.testimonials-holder .grid .grid-item{
+	.author-info{
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		float: left;
+		img{
+			width: 40%;
+			margin-left:10%;
+			display: inline-block;
+			float: left;
+		}
+		.name,.date, .rating{
+			width: 50%;
+			display: inline-block;
+			float: right;
+		}
+	}	
+	.review-text{
+		width: 100%;
+		display: block;
+		margin: 15px auto;
+		float: left;
+		.text{
+			width: 100%;
+			text-align: justify;
+		}
+	}
+}
+}
+@media screen and(max-width: 797px){
+	.welcome{
+		a{
+			width: 65%;
+			h4{
+				padding: 5%;
+			}
+		}
+	}
+
+	.service-intro-holder .price-holder .plan-container{	
+		h3{
+			width: 80%;
+			padding-bottom: 1%;
+		}
+	}
+
+}
+@media screen and (max-width: 660px){
+	.intro{
+		width: auto;
+		margin: 1% 0;
+	}
+
+	.welcome{
+		a{
+			width: 55%;
+		}
+		.text-holder{
+		width: 90%;
+		}
+	}
+
+	.price-holder{
+		width: 90% !important;
+		
+		.plan-container{
+			width: 100% !important;
+			margin: 1% auto !important;
+			border-radius: 0px !important;
+			
+			&:nth-child(4){
+				margin-bottom: 30px !important;
+			}
+		}
+	}
+
+	.testimonials-holder{
+	@include homeHeader();
+		.grid{
+			width: 90%;
+			.grid-item{
+				width: 100%;
+				margin: 5% 0;
+				display: block;
+				float: left;
+				.author-info{
+					width: 50%;
+					display: block;
+					float: none;
+					margin: 0 auto;
+					img{
+						width: 50%;
+						display: block;
+						margin-left:25%;
+						
+					}
+					.name,.date, .rating{
+						width: 100%;
+						display: block;
+						clear: both;
+					}
+				}
+
+				.review-text{
+					width: 90%;
+					display: block;
+					margin: 0 auto;
+					text-align: justify;
+					.text {
+						width: 100%;
+						margin-left:5%;
+						p{
+							display: block;
+							width: 100% !important;
+							
+						}
+					}
+				}
+			}
+		}
+}
+
 }

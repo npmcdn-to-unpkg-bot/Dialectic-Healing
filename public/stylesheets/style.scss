@@ -79,7 +79,7 @@ header, section, footer{
 
 #navigation{
 	background-color: $white;
-
+	padding-right: 0px;
 }
 
 .nav{
@@ -158,10 +158,15 @@ header, section, footer{
 
 @media screen and (max-width: 650px){
 header,section,footer{
-	width: 100%;
+	width: auto;
 	margin: 0;
 	padding: 0 !important;
 }
+
+#navigation{
+	width: 99vw;
+}
+
 
 .nav{
 	display: none;

@@ -105,7 +105,7 @@
         font-family: "Lato", sans-serif;
         font-weight: 300;
         display: block;
-        color: #FFFFFF;
+        color: #493d38;
         font-size: 1.3em;
         font-weight: 400; }
       .service-intro-holder .price-holder .plan-container h4 {
@@ -120,7 +120,7 @@
         width: 200px;
         margin: 2px auto;
         padding-bottom: 10px;
-        border-bottom: 1px solid #FFFFFF;
+        border-bottom: 1px solid #493d38;
         font-size: 1.1em; }
       .service-intro-holder .price-holder .plan-container p {
         width: 200px;
@@ -164,6 +164,93 @@
     .testimonials-holder .grid .index-testimonial {
       vertical-align: top; }
 
+@media screen and (max-width: 1118px) {
+  .testimonials-holder .grid .grid-item .author-info {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    float: left; }
+    .testimonials-holder .grid .grid-item .author-info img {
+      width: 40%;
+      margin-left: 10%;
+      display: inline-block;
+      float: left; }
+    .testimonials-holder .grid .grid-item .author-info .name, .testimonials-holder .grid .grid-item .author-info .date, .testimonials-holder .grid .grid-item .author-info .rating {
+      width: 50%;
+      display: inline-block;
+      float: right; }
+  .testimonials-holder .grid .grid-item .review-text {
+    width: 100%;
+    display: block;
+    margin: 15px auto;
+    float: left; }
+    .testimonials-holder .grid .grid-item .review-text .text {
+      width: 100%;
+      text-align: justify; } }
+@media screen and (max-width: 797px) {
+  .welcome a {
+    width: 65%; }
+    .welcome a h4 {
+      padding: 5%; }
+
+  .service-intro-holder .price-holder .plan-container h3 {
+    width: 80%;
+    padding-bottom: 1%; } }
+@media screen and (max-width: 660px) {
+  .intro {
+    width: auto;
+    margin: 1% 0; }
+
+  .welcome a {
+    width: 55%; }
+  .welcome .text-holder {
+    width: 90%; }
+
+  .price-holder {
+    width: 90% !important; }
+    .price-holder .plan-container {
+      width: 100% !important;
+      margin: 1% auto !important;
+      border-radius: 0px !important; }
+      .price-holder .plan-container:nth-child(4) {
+        margin-bottom: 30px !important; }
+
+  .testimonials-holder h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    margin: 5% 0 1%;
+    text-align: center; }
+  .testimonials-holder .grid {
+    width: 90%; }
+    .testimonials-holder .grid .grid-item {
+      width: 100%;
+      margin: 5% 0;
+      display: block;
+      float: left; }
+      .testimonials-holder .grid .grid-item .author-info {
+        width: 50%;
+        display: block;
+        float: none;
+        margin: 0 auto; }
+        .testimonials-holder .grid .grid-item .author-info img {
+          width: 50%;
+          display: block;
+          margin-left: 25%; }
+        .testimonials-holder .grid .grid-item .author-info .name, .testimonials-holder .grid .grid-item .author-info .date, .testimonials-holder .grid .grid-item .author-info .rating {
+          width: 100%;
+          display: block;
+          clear: both; }
+      .testimonials-holder .grid .grid-item .review-text {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        text-align: justify; }
+        .testimonials-holder .grid .grid-item .review-text .text {
+          width: 100%;
+          margin-left: 5%; }
+          .testimonials-holder .grid .grid-item .review-text .text p {
+            display: block;
+            width: 100% !important; } }
 .services-container {
   height: 100%;
   width: 100%;
@@ -275,7 +362,7 @@
       font-family: "Lato", sans-serif;
       font-weight: 300;
       display: block;
-      color: #FFFFFF;
+      color: #493d38;
       font-size: 1.3em;
       font-weight: 400; }
     .price-holder .plan-container h4 {
@@ -290,7 +377,7 @@
       width: 200px;
       margin: 2px auto;
       padding-bottom: 10px;
-      border-bottom: 1px solid #FFFFFF;
+      border-bottom: 1px solid #493d38;
       font-size: 1.1em; }
     .price-holder .plan-container p {
       width: 200px;
@@ -749,7 +836,8 @@ header, section, footer {
   display: none; }
 
 #navigation {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding-right: 0px; }
 
 .nav {
   float: none;
@@ -818,9 +906,12 @@ header, section, footer {
     margin: 1% 1%; } }
 @media screen and (max-width: 650px) {
   header, section, footer {
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0 !important; }
+
+  #navigation {
+    width: 99vw; }
 
   .nav {
     display: none; }

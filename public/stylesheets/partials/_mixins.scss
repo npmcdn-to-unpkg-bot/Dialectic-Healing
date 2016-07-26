@@ -108,7 +108,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	border-bottom-left-radius:$radius;
 }
 
-@mixin serviceBlock($height){
+@mixin serviceBlock($height,$color){
 	.price-holder{
 		width: 80%;
 		margin:0 auto;
@@ -125,7 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 			h2,h3,h4,p{
 				@include thinHeader();
 				display: block;
-				color:$white;
+				color:$color;
 				font-size: 1.3em;
 				font-weight: 400;
 			}
@@ -142,7 +142,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 				width: 200px;
 				margin: 2px auto;
 				padding-bottom: 10px;
-				border-bottom: 1px solid $white;
+				border-bottom: 1px solid $color;
 				font-size: 1.1em;
 			}
 			p{
