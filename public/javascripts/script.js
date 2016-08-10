@@ -75,9 +75,8 @@ function faqPage(){
     $('.section').hide();
     
     var $overlay = $('<div id="overlay"></div>');
-    var $image = $('<img id="img">');
     var $sectionWrapper = $('<div class="section-wrapper"></div>');
-    var $close = $('<i class="fa fa-times" aria-hidden="true"></i>');
+    var $close = $('<i id="close" class="fa fa-times" aria-hidden="true"></i>');
 
     $('body').append($overlay);
 
@@ -94,7 +93,27 @@ function faqPage(){
         });
     });
 
-    $(document).on('click','.clone .fa-times', function(){
+    $section = $('<div class="section"></div>');
+    $policy = $("<strong>Cancellation Policy</strong>"
+                + "<p>We understand that unanticipated events happen occasionally in everyone’s life. In our desire to be effective and fair to all clients, the following policies are honored:</p>"
+                + "<p>24 hour advance notice is required when cancelling an appointment. This allows the opportunity for someone else to schedule an appointment. If you are unable to give us 24 hours advance notice you will be charged the full amount of your appointment. This amount must be paid prior to your next scheduled appointment.</p>"
+                + "<strong>No-shows</strong>"
+                + "<p>Anyone who either forgets or consciously chooses to forgo their appointment for whatever reason will be considered a “no-show.” They will be charged for their “missed” appointment.</p>"
+                + "<strong>Late Arrivals</strong>"
+                + "<p>If you arrive late, your session may be shortened in order to accommodate others whose appointments follow yours. Depending upon how late you arrive, your therapist will then determine if there is enough time remaining to start a treatment. Regardless of the length of the treatment actually given, <strong>you will be responsible for the “full” session</strong>. Out of respect and consideration to your therapist and other customers, please plan accordingly and be on time.</p>"
+                + "<strong>We look forward to serving you!</strong>"
+                );
+
+    $('#legal').on('click', function(){
+        $section.empty();
+        $section.append($policy).append($close);
+        $sectionWrapper.append($section);
+        $overlay.append($sectionWrapper);
+        $overlay.css('min-height',"100%");
+        $overlay.fadeIn("fast");
+    });
+
+    $(document).on('click','#close', function(){
         $('.section-wrapper').empty();
         $overlay.fadeOut('fast');
         $('#overlay').css('min-height',0);
@@ -128,8 +147,6 @@ $('.services li').on('click', function(){
         $info.slideUp("slow","linear");
     }else{
         setTimeout(function(){
-            console.log("hello");
-                    
             $arrow.toggleClass('down');
             $info.slideToggle("slow","linear");
         }, 600);

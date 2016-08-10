@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   			 	price: "$40",
   			 	time: "1h Massage",
 		        title: "Introductory Offer",
-		        notes: "Come experience what the fuss is all about!"
+		        notes: "Health if the first step to Freedom"
   			 },{
   			 	price: "$50",
   			 	time: "1h Massage",

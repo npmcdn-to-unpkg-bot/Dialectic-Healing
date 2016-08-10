@@ -18,21 +18,23 @@
 			display: inline-block;
 			float: left;
 			position: relative;
+			color: $deep-blue;
 			button{
 				position: relative;
+
 				@include threes();
 				border-radius: 50%;
 				border: 8px solid $primary-green;
 				background-color: #EEEEEE;
 				margin-bottom: 1%;
 				h2{
-				width: 200px;
+				width: auto;
 				position: absolute;
 				@include thinHeader();
 				font-size: 1.4em;
 				font-weight: 400;
-				color: $primary-brown;
-				left: 15px;
+				left: 0;
+				right: 0;
 				bottom: -50px;
 				}
 				&:focus{
@@ -93,6 +95,43 @@
 			p{
 					margin:1% auto;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 1118px){}
+@media screen and(max-width: 797px){
+	#overlay .section-wrapper{
+		width: 90%;
+		.section{
+			width: 90%;
+			position: relative;
+			margin:0 auto;
+			padding: 10% 0 5%;
+		}
+	}
+}
+@media screen and (max-width: 650px){
+
+	.faq-wrapper .initial-sections .button-block{
+		width: 50% !important;
+		float: none !important;
+		display: block;
+		margin: 15% auto;
+		button h2{
+			
+			left:0;
+			right:0;
+		}
+	}
+}
+
+@media screen and (max-width: 400px){
+
+	.faq-wrapper .initial-sections .button-block{
+		width: 80% !important;
+		button h2{
+			
 		}
 	}
 }

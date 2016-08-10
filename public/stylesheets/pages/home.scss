@@ -12,14 +12,14 @@
 			margin: 0 8px;
 			button:before{
 			font-size: 10px;
-			color: darken($secondary-khaki,15%);
+			color: $secondary-purple;
 			}
 		}
 	}
 }
 
 .slick-dots li.slick-active button:before {
-	color: darken($secondary-khaki,30%) !important;
+	color: $primary-purple !important;
 }
 .intro{
 min-height: 484px;

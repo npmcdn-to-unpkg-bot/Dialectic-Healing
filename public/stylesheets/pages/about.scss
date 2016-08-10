@@ -1,5 +1,4 @@
 .about-wrapper{
-
 	h2{
 		text-align: center;
 		@include thinHeader();
@@ -32,7 +31,7 @@
 
 	.portrait-container{
 	  width: 25%;
-	  margin: 0 2% 2% 4%;
+	  margin: 0 2% 0 4%;
 	  padding: 3% 0 3% 0;
 	  height: auto;
 	  float: left;
@@ -143,4 +142,23 @@
 
 @media screen and (max-width: 1118px){}
 @media screen and(max-width: 797px){}
-@media screen and (max-width: 650px){}
+@media screen and (max-width: 650px){
+	.practitioner{
+		.portrait-container{
+			display: block !important;
+			width: 50% !important;
+			margin: 2% auto 0 !important;
+			float: none !important;
+
+		}
+	}
+	.reviews{
+		.grid-size, .review{
+			width: 95%;
+			left:2.5% !important;
+			.review-text .text{
+				margin: 2% auto;
+			}
+		}
+	}
+}

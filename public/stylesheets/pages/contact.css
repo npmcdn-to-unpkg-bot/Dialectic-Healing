@@ -1,5 +1,5 @@
 /*
-Error: Undefined variable: "$secondary-beige".
+Error: Undefined variable: "$secondary-purple".
         on line 22 of ./pages/contact.scss
 
 17: 		.box-style{
@@ -7,7 +7,7 @@ Error: Undefined variable: "$secondary-beige".
 19: 			display: block;
 20: 			padding: 18px 15px;
 21: 			margin-top: 0.5%;
-22: 			border:1px solid $secondary-beige;
+22: 			border:1px solid $secondary-purple;
 23: 			font-family: $primary-font;
 24: 			font-size: 1.2em;
 25: 			letter-spacing: 1px;
@@ -93,4 +93,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$secondary-beige\".\A         on line 22 of ./pages/contact.scss\A \A 17: 		.box-style{\A 18: 			width: 100%;\A 19: 			display: block;\A 20: 			padding: 18px 15px;\A 21: 			margin-top: 0.5%;\A 22: 			border:1px solid $secondary-beige;\A 23: 			font-family: $primary-font;\A 24: 			font-size: 1.2em;\A 25: 			letter-spacing: 1px;\A 26: 			transition:background-color 0.5s ease;\A 27: 			background-color: $white;"; }
+  content: "Error: Undefined variable: \"$secondary-purple\".\A         on line 22 of ./pages/contact.scss\A \A 17: 		.box-style{\A 18: 			width: 100%;\A 19: 			display: block;\A 20: 			padding: 18px 15px;\A 21: 			margin-top: 0.5%;\A 22: 			border:1px solid $secondary-purple;\A 23: 			font-family: $primary-font;\A 24: 			font-size: 1.2em;\A 25: 			letter-spacing: 1px;\A 26: 			transition:background-color 0.5s ease;\A 27: 			background-color: $white;"; }

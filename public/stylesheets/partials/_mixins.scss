@@ -13,6 +13,7 @@ a {
 	    border-bottom: 1px solid $color;
 	    transition: 0.4s;
 	  }
+
 	  &:hover:after{
   		width: 100%;
 	  }
@@ -21,7 +22,7 @@ a {
 
 @mixin mobileMenuRadius($radius){
 	a{
-		color:#666666;
+		color:#44336f;
 		&:hover{
 			border-radius:$radius;
 		}

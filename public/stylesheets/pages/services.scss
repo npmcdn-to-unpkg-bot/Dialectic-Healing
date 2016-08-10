@@ -29,6 +29,7 @@
 	padding: 0;
 	position: relative;
 	> li{
+		cursor: pointer;
 		min-height: 35px;
 		margin: 0;
 		text-align: center;
@@ -37,7 +38,7 @@
 		@include containerGradient();
 		> p{
 			padding: 5px 0 10px;
-			font-size: 1.2em;
+			font-size: 1em;
 			i{
 				font-size: 0.7em;
 				@include transitionLinear(0.3s);
@@ -89,5 +90,58 @@
 @include serviceBlock(auto, darken($primary-brown,10%));
 
 @media screen and (max-width: 1118px){}
-@media screen and(max-width: 797px){}
-@media screen and (max-width: 650px){}
+@media screen and(max-width: 797px){
+	.massages{
+		width: 90% !important;
+		margin-left: 5% !important;
+		
+		display: block;
+		float: none !important;
+		.services{
+			width: 100%;
+			display: block;
+			float: left;
+			
+		}
+	}
+	.price-holder{
+		width: 90% !important;
+		margin-left: 5% !important;
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 650px){
+	.massages{
+		width: 100% !important;
+		margin: 1% auto !important;
+		margin-left:0 !important;
+		.services{
+			width: 100%;
+			li{
+				width: 100%;
+				float: none;
+				ul{
+					width: 100%;
+				}
+			#acupuncture{float: none;}
+			#massage{
+				float: none;
+				margin-left:0;
+			}
+			#combination{float: none;}
+			}
+		}
+	}
+
+	.price-holder{
+		width: 100% !important;
+		margin-left: 0;
+		margin: 0 auto !important;
+		@include containerGradient();
+
+	}
+
+
+}

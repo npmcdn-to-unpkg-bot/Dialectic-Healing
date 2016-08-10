@@ -1,22 +1,21 @@
 /*
 Error: Undefined mixin 'thinHeader'.
-        on line 5 of ./pages/about.scss, in `thinHeader'
-        from line 5 of ./pages/about.scss
+        on line 4 of ./pages/about.scss, in `thinHeader'
+        from line 4 of ./pages/about.scss
 
 1: .about-wrapper{
-2: 
-3: 	h2{
-4: 		text-align: center;
-5: 		@include thinHeader();
-6: 	}
-7: 
-8: 	.practitioner{
-9: 		@include containerGradient();
-10: 		border-radius: 10px;
+2: 	h2{
+3: 		text-align: center;
+4: 		@include thinHeader();
+5: 	}
+6: 
+7: 	.practitioner{
+8: 		@include containerGradient();
+9: 		border-radius: 10px;
 
 Backtrace:
-./pages/about.scss:5:in `thinHeader'
-./pages/about.scss:5
+./pages/about.scss:4:in `thinHeader'
+./pages/about.scss:4
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
@@ -81,4 +80,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'thinHeader'.\A         on line 5 of ./pages/about.scss, in `thinHeader'\A         from line 5 of ./pages/about.scss\A \A 1: .about-wrapper{\A 2: \A 3: 	h2{\A 4: 		text-align: center;\A 5: 		@include thinHeader();\A 6: 	}\A 7: \A 8: 	.practitioner{\A 9: 		@include containerGradient();\A 10: 		border-radius: 10px;"; }
+  content: "Error: Undefined mixin 'thinHeader'.\A         on line 4 of ./pages/about.scss, in `thinHeader'\A         from line 4 of ./pages/about.scss\A \A 1: .about-wrapper{\A 2: 	h2{\A 3: 		text-align: center;\A 4: 		@include thinHeader();\A 5: 	}\A 6: \A 7: 	.practitioner{\A 8: 		@include containerGradient();\A 9: 		border-radius: 10px;"; }

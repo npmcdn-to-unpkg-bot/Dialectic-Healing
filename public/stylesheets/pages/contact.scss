@@ -19,7 +19,7 @@
 			display: block;
 			padding: 18px 15px;
 			margin-top: 0.5%;
-			border:1px solid $secondary-beige;
+			border:1px solid $secondary-purple;
 			font-family: $primary-font;
 			font-size: 1.2em;
 			letter-spacing: 1px;
@@ -114,6 +114,7 @@
 	.contact-holder{
 	background-color: $white;
 	border-radius: $form-radius;
+	border:1px solid $secondary-purple;
 		.info{
 			width: 100%;
 			float: left;
@@ -155,7 +156,7 @@
 		top:0;
 		left:0;
 		z-index: 0;	
-		border:2px solid $secondary-beige;
+		border:1px solid $secondary-purple;
 		border-radius: $form-radius;
 	}
 
